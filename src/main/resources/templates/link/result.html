@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>보내온 정보</h1>
+<span>고객명 : [[${map['name']}]]</span><br>
+<span>상품 정보 : [[${map['id']}]]</span>
+<a th:href="@{/link}">go back</a>
+</body>
+</html>

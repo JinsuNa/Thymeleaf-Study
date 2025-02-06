@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>LocalDateTime</h1>
+<ul>
+  <li>default : [[${nowDateTime}]]</li>
+  <li>#temporals 유틸리티 사용하기 : <span th:text="${#temporals.format(nowDateTime,'yyyy-MM-dd HH:mm:ss')}"></span></li>
+</ul>
+</body>
+</html>

@@ -16,6 +16,11 @@ public class UserData {
         this.userAge = userAge;
     }
 
+    public UserData() {
+        this.userName = userName;
+        this.userAge = userAge;
+    }
+
 
     //    @AllArgsConstructor
 //   public UserData(String userName, int userAge, String userAddress) {
