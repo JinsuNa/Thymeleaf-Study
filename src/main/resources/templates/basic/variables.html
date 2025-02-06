@@ -14,9 +14,52 @@
 <ul>
     <li>object</li>
     <span>userData.userName : </span> <span th:text="${userData.userName}"></span> <br>
+
     <span>userData['userAge'] : </span> <span th:text="${userData['userAge']}"></span> <br>
+
     <span>userData.getUserAddress() : </span> <span th:text="${userData.getUserAddress()}"></span>
 </ul>
+
+<ul>
+    <li>List</li>
+    <span>fruits[0].fruitsName : </span> <span th:text="${fruits[0].fruitName}"></span> <br>
+
+    <span>fruits[0].getTaste() : </span> <span th:text="${fruits[0].getTaste()}"></span> <br>
+</ul>
+
+<table border="1">
+    <tr>
+        <th>No</th>
+        <th>과일이름</th>
+        <th>과일맛</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>[[${fruits[0].fruitName}]]</td>
+        <td>[[${fruits[0].getTaste()}]]</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>[[${fruits[1].fruitName}]]</td>
+        <td>[[${fruits[1].getTaste()}]]</td>
+    </tr>
+</table>
+
+<ul>
+    <li>Map</li>
+    <span>- map['cat'].name : <span th:text="${map['cat'].name}"></span></span> <br>
+
+    <span>- map['cat'].sound : <span th:text="${map['cat'].getSound}"></span></span> <br>
+</ul>
+
+<div th:with="dogName=${map['dog'].name}, dogSound=${map['dog'].sound}">
+    <h3>변수선언 : with</h3>
+    <ul>
+        <li> 강아지 이름 : <span th:text="${dogName}"></span></li>
+        <li> 강아지는 [[${dogSound}]] 웁니다.</li>
+
+    </ul>
+</div>
 
 </body>
 </html>
