@@ -61,4 +61,9 @@ public class LinkController {
         model.addAttribute("map", select);
         return "/link/result";
     }
+
+    @GetMapping("/main")
+    public String main() {
+        return "main";
+    }
 }

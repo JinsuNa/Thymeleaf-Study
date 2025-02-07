@@ -24,12 +24,14 @@
     <span>요청 구두번호 : [[${shoesNumber}]]</span><br>
 
     <li>
-        <a th:href="@{/shoes/details/{id}(id=${shoesNumber})}">Path Variable</a>
+<!--        <a th:href="@{/shoes/details/{id}(id=${shoesNumber})}">Path Variable</a>-->
+        <a th:href="@{|/shoes/details/${shoesNumber}|}">Path Variable</a>
     </li>
     <br>
 
     <li>
-        <a th:href="@{/shoes/{id}(id=${shoesNumber} ,name=${name})}">Query Params + Path Variable</a><br>
+<!--        <a th:href="@{/shoes/{id}(id=${shoesNumber} ,name=${name})}">Query Params + Path Variable</a><br>-->
+        <a th:href="@{|/shoes/${shoesNumber}?name=${name}|}">Query Params + Path Variable</a><br>
     </li>
     <br>
 </ul>

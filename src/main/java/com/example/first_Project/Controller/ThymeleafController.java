@@ -10,10 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 @Controller
@@ -74,4 +71,45 @@ public class ThymeleafController {
         model.addAttribute("map", animalMap);
         return "/basic/variables";
     }
+
+    @GetMapping("/literal")
+    public String literal(Model model) {
+        model.addAttribute("data", "Spring!");
+        return "/basic/literal";
+    }
+
+    @GetMapping("/operation")
+    public String operation(Model model) {
+        model.addAttribute("nullData", null);
+        model.addAttribute("name", "나진수");
+        return "/basic/operation";
+    }
+
+    @GetMapping("/attribute")
+    public String attribute() {
+        return "/basic/attribute";
+
+    }
+
+    @GetMapping("/for")
+    public String forOperation(Model model) {
+        addUser(model);
+        return "/basic/for_opr";
+    }
+
+    private void addUser(Model model) {
+        List<UserData> userList = new ArrayList<>(
+                Arrays.asList(
+                        new UserData("나진수", 31, "서울"),
+                        new UserData("장원영", 20, "인천"),
+                        new UserData("안유진", 23, "경기"),
+                        new UserData("카리나", 25, "수원"),
+                        new UserData("윈터", 22, "대전"),
+                        new UserData("수똥", 25, "부산")
+                )
+        );
+        model.addAttribute(userList);
+
+    }
+
 }

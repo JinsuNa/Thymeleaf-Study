@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>전체 게시글 읽기 성공</h1>
+<div th:object="${data}">
+<h4>[[*{number}]]번 게시글 읽어오기 성공</h4>
+
+    <a th:href="@{/main}">go back</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li><a th:href="@{/articles/list}">전체 게시글</a></li>
+    <br>
+    <li><a th:href="@{/articles/(number=${number})}">게시글 읽어오기</a></li>
+    <br>
+
+    <li><a href="#">게시글 디테일</a></li>
+    <br>
+
+    <li><a href="#">업데이트</a></li>
+    <br>
+
+    <li><a href="#">게시글 수정 폼 로딩</a></li>
+    <br>
+
+    <li><a href="#">글 삭제</a></li>
+    <br>
+
+    <li><a href="#">댓글보기</a></li>
+    <br>
+
+    <li><a href="#">답글 삭제</a></li>
+</ul>
+</body>
+</html>

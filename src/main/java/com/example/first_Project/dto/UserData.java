@@ -5,21 +5,21 @@ import lombok.*;
 
 @AllArgsConstructor
 @Data
-
+@NoArgsConstructor
 public class UserData {
     private String userName;
     private int userAge;
     private String userAddress;
 
-    public UserData(String userName, int userAge) {
-        this.userName = userName;
-        this.userAge = userAge;
-    }
-
-    public UserData() {
-        this.userName = userName;
-        this.userAge = userAge;
-    }
+//    public UserData(String userName, int userAge) {
+//        this.userName = userName;
+//        this.userAge = userAge;
+//    }
+//
+//    public UserData() {
+//        this.userName = userName;
+//        this.userAge = userAge;
+//    }
 
 
     //    @AllArgsConstructor
